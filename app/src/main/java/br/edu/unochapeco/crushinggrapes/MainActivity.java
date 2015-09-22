@@ -2,8 +2,6 @@ package br.edu.unochapeco.crushinggrapes;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import AndGraph.AGGameManager;
 import AndGraph.AGInputManager;
@@ -12,17 +10,22 @@ import AndGraph.AGInputManager;
 public class MainActivity extends Activity {
 
     private AGGameManager manager;
+    private GameFase gameFase;
 
       
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        gameFase = new GameFase();
+
         manager = new AGGameManager(this, false);
         manager.addScene(new IntroScene(manager));
         manager.addScene(new MenuScene(manager));
         manager.addScene(new Credits(manager));
-        manager.addScene(new Game(manager));
+        manager.addScene(new Game(manager, gameFase));
+        manager.addScene(new GameOver(manager, gameFase));
+
 
     }
 

@@ -6,9 +6,7 @@ import AndGraph.AGScene;
 import AndGraph.AGScreenManager;
 import AndGraph.AGSprite;
 
-/**
- * Created by everton on 01/09/15.
- */
+
 public class Credits extends AGScene {
 
     private AGSprite sobre, voltar = null;

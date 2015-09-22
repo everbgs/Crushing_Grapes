@@ -6,9 +6,7 @@ import AndGraph.AGScene;
 import AndGraph.AGScreenManager;
 import AndGraph.AGSprite;
 
-/**
- * Created by vitor on 29/08/15.
- */
+
 public class MenuScene extends AGScene {
 
     private AGSprite fundo, botaojogar, botaocredits, botaosair = null;

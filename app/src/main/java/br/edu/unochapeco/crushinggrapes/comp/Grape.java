@@ -2,9 +2,7 @@ package br.edu.unochapeco.crushinggrapes.comp;
 
 import AndGraph.AGSprite;
 
-/**
- * Created by everton on 08/09/15.
- */
+
 public class Grape implements CompGame {
     private AGSprite grape;
     private boolean grapeType;

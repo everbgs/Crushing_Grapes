@@ -6,9 +6,7 @@ import AndGraph.AGScreenManager;
 import AndGraph.AGSoundManager;
 import AndGraph.AGSprite;
 
-/**
- * Created by vitor on 29/08/15.
- */
+
 public class IntroScene extends AGScene {
     private AGSprite nonoBepi;
     private int estadoSprite = 0;

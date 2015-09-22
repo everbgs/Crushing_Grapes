@@ -8,15 +8,13 @@ import java.util.Random;
 
 import AndGraph.AGSoundManager;
 
-/**
- * Created by vitor on 12/09/15.
- */
+
 public class Som {
 
     private static final String somIntro = "funiculi.mid";
     private static final String somJogo = "tarantella.mid";
-    private static final String[] sonsAleatorios = {"barucha.mp3", "esqueceujapona.mp3", "tchucodenovo.mp3"};
-    private static final String[] sonsFalha = {"porcocane.mp3", "sacramento.mp3"};
+    private static final String[] sonsAleatorios = {"barucha.mp3", "esqueceujapona.mp3", "tchucodenovo.mp3", "vaicarpir.mp3"};
+    private static final String[] sonsFalha = {"porcocane.mp3", "sacramento.mp3", "vinho.mp3", "velho.mp3", "porco.mp3"};
 
     /**
      * Executa o som da intro.
@@ -35,11 +33,25 @@ public class Som {
     }
 
     /**
+     * Para  o som de fundo
+     */
+    public static void stopSomJogo() {
+        AGSoundManager.vrMusic.stop();
+    }
+    /**
+     * Verifica se o som de fundo está tocando.
+     */
+    public static boolean isSomJogoPlaying() {
+        return AGSoundManager.vrMusic.isPlaying();
+    }
+
+    /**
      * Executa um som aleatório.
      */
     public static void somAleatorio() {
         int som = AGSoundManager.vrSoundEffects.loadSoundEffect(getAleatorio(sonsAleatorios));
         AGSoundManager.vrSoundEffects.play(som);
+
     }
 
     /**
